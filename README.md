@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
 # Demo
-                                                                            
+Puedes verla y probarla haciendo click en el enlace:
+https://cli-rep-and-sales-demo.herokuapp.com/    
+
 You can see it and try it, doing click in the link:                         
 https://cli-rep-and-sales-demo.herokuapp.com/                               
                                                                             
