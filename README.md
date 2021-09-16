@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Demo
 
 Puedes verla y probarla haciendo click en el enlace:
-https://cli-rep-and-sales-demo.herokuapp.com/    
+https://cli-rep-and-sales-demo.herokuapp.com/   
+
+Nota: Esta en desarrollo, te recomiendo usarla desde una PC.
 
 You can see it and try it, doing click in the link:                         
 https://cli-rep-and-sales-demo.herokuapp.com/                               
