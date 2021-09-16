@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Administrar Productos</h2>
+    <div class="row">
+        <mat-card class="col ml-1">
+        <mat-card-title>Nueva Reparacion</mat-card-title>
+        <mat-card-subtitle>registra una nueva reparacion</mat-card-subtitle>
+        <button routerLink="new-repair" mat-fab color="primary">
+            <mat-icon>add</mat-icon>
+        </button>
+        </mat-card>
+        <mat-card  class="col ml-1">
+            <mat-card-title>Lista de Reparaciones</mat-card-title>
+            <mat-card-subtitle>Visualiza todos tus reparaciones</mat-card-subtitle>
+            <a  routerLink="list-repair" mat-fab color="primary">
+                <mat-icon>list</mat-icon>
+            </a>
+        </mat-card>
+        <mat-card  class="col ml-1">
+            <mat-card-title>Reportes</mat-card-title>
+            <mat-card-subtitle>detalles principales de las reparaciones</mat-card-subtitle>
+            <a  routerLink="report-repair" mat-fab color="primary">
+                <mat-icon>assignment</mat-icon>
+            </a>
+            
+        </mat-card>
+        
+    </div>
+</div>
+<br>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+<router-outlet></router-outlet>

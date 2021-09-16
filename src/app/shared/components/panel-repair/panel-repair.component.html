@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="list">
+                <mat-icon>list</mat-icon>
+                List Rep
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="add-item-rep">
+                <mat-icon>extension</mat-icon>
+                +Item Rep
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="add-input-rep">
+                <mat-icon>bubble_chart</mat-icon>
+                +Insumo
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="list-item-rep">
+                <mat-icon>list</mat-icon>
+                List Item Rep
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="list-input-rep">
+                <mat-icon>list</mat-icon>
+                List Insum Rep
+            </button>
+            
+        </div>
+        <div class="col-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

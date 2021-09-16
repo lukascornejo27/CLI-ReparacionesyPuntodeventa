@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="list">
+                <mat-icon>list</mat-icon>
+                List Cli
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="add-cli">
+                <mat-icon>person</mat-icon>
+                +Cli
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="debtor-cli">
+                <mat-icon>bubble_chart</mat-icon>
+                Deuds
+            </button>
+            <button mat-button  class="col btn-lateral border" type="button" routerLink="money-sign">
+                <mat-icon>list</mat-icon>
+                Señas
+            </button>
+            
+        </div>
+        <div class="col-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

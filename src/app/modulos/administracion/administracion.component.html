@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>Administracion</h2>
+    <div class="row">
+        <mat-card class="col ml-1">
+        <mat-card-title>Clientes</mat-card-title>
+        <mat-card-subtitle>Administra tus clientes, las deudas de los mismos etc..</mat-card-subtitle>
+        <button routerLink="clients" mat-fab color="primary">
+            <mat-icon>person</mat-icon>
+        </button>
+        </mat-card>
+        <mat-card  class="col ml-1">
+            <mat-card-title>Reparaciones</mat-card-title>
+            <mat-card-subtitle>Administra las reparaciones, genera reportes etc...</mat-card-subtitle>
+            <a  routerLink="repair" mat-fab color="primary">
+                <mat-icon>build</mat-icon>
+            </a>
+        </mat-card>
+        <mat-card  class="col ml-1">
+            <mat-card-title>Ventas</mat-card-title>
+            <mat-card-subtitle>Administra las ventas, genera reportes etc...</mat-card-subtitle>
+            <a  routerLink="sales" mat-fab color="primary">
+                <mat-icon>money</mat-icon>
+            </a>
+        </mat-card>
+        <mat-card  class="col ml-1">
+            <mat-card-title>Empleados</mat-card-title>
+            <mat-card-subtitle>Gestiona tus empleados</mat-card-subtitle>
+            <a  routerLink="employees" mat-fab color="primary">
+                <mat-icon>group</mat-icon>
+            </a>
+            
+        </mat-card>
+        <mat-card  class="col ml-1">
+            <mat-card-title>Reportes</mat-card-title>
+            <mat-card-subtitle>Genera informes sobre tu negocio</mat-card-subtitle>
+            <a  routerLink="reports" mat-fab color="primary">
+                <mat-icon>assignment</mat-icon>
+            </a>
+            
+        </mat-card>
+        
+    </div>
+</div>
+<br>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+<router-outlet></router-outlet>

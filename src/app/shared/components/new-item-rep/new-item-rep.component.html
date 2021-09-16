@@ -1,0 +1,53 @@
+<div class="container">
+
+    <form [formGroup]="myForm" (ngSubmit)="enviar()" enctype="multipart/form-data">
+        <div class="form">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                            placeholder="nombre"
+                            [ngClass]="{ 'is-invalid': submitted && form['nombre'].errors }">
+                        <div *ngIf="form['nombre'].dirty || form['nombre'].touched || submitted" class="invalid-feedback" >
+                            <p *ngIf="form['nombre'].hasError('required')">
+                                Campo obligatorio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="dificultad">Dificultad</label>
+                        <input type="text" class="form-control" id="dificultad" formControlName="dificultad"
+                            placeholder="dificultad">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="number" class="form-control" id="precio" formControlName="precio"
+                            placeholder="precio"
+                            [ngClass]="{ 'is-invalid': submitted && form['precio'].errors }">
+                        <div *ngIf="form['precio'].dirty || form['precio'].touched || submitted" class="invalid-feedback">
+                            <p *ngIf="form['precio'].hasError('pattern')">
+                                ingresa solo numeros
+                            </p>
+                            <p *ngIf="form['precio'].hasError('required')">
+                                campo requerido
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary btn-sm m-3">
+                Guardar Item
+            </button>
+        </div>
+    </form>
+
+</div>

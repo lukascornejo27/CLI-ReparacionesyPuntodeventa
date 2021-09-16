@@ -1,0 +1,15 @@
+nav{
+    background-color: #3f51b5 !important;
+    color: white;
+}
+nav.a{
+    color: white;
+}
+
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+

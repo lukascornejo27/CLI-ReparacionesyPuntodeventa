@@ -1,0 +1,81 @@
+<div class="container">
+
+    <form [formGroup]="myForm" (ngSubmit)="enviar()" enctype="multipart/form-data">
+        <div class="form">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                            placeholder="nombre"
+                            [ngClass]="{ 'is-invalid': submitted && form['nombre'].errors }">
+                        <div *ngIf="form['nombre'].dirty || form['nombre'].touched || submitted" class="invalid-feedback" >
+                            <p *ngIf="form['nombre'].hasError('required')">
+                                Campo obligatorio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" formControlName="apellido"
+                            placeholder="apellido"
+                            [ngClass]="{ 'is-invalid': submitted && form['apellido'].errors }">
+                        <div *ngIf="form['apellido'].dirty || form['apellido'].touched || submitted" class="invalid-feedback" >
+                            <p *ngIf="form['apellido'].hasError('required')">
+                                Campo obligatorio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="number" class="form-control" id="telefono" formControlName="telefono"
+                            placeholder="telefono">
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="dni">Dni</label>
+                        <input type="number" class="form-control" id="dni" formControlName="dni"
+                            placeholder="dni"
+                            [ngClass]="{ 'is-invalid': submitted && form['dni'].errors }">
+                        <div *ngIf="form['dni'].dirty || form['dni'].touched || submitted" class="invalid-feedback">
+                            <p *ngIf="form['dni'].hasError('pattern')">
+                                ingresa solo numeros
+                            </p>
+                            <p *ngIf="form['dni'].hasError('required')">
+                                campo requerido
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" formControlName="email"
+                    placeholder="email"
+                    [ngClass]="{ 'is-invalid': submitted && form['email'].errors }">
+                <div *ngIf="form['email'].dirty || form['email'].touched || submitted" class="invalid-feedback">
+                    <p  *ngIf="form['email'].hasError('email')">
+                        Email invalido
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary btn-sm m-3">
+                Guardar Cliente
+            </button>
+        </div>
+    </form>
+
+</div>

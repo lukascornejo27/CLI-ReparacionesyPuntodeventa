@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="shadow">
+        <div class="container p-3">
+            <input type="text" class="form-control" id="buscar" placeholder="Buscar..."[(ngModel)]="buscarCli" [ngModelOptions]="{standalone: true}">
+        </div>
+        <h3>Reparaciones</h3>
+        <table class="table table-striped mt-3">
+
+            <thead>
+                <tr>
+                    <th scope="col">Accion</th>
+                    <th scope="col">Nombre y Apellido</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Dni</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cli of clientes|buscarCli: buscarCli">
+                    <td>
+                        <button mat-button (click)="edit(cli._id)" class="btn btn-light btn-sm" type="button">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-button (click)="delete(cli._id)" class="btn btn-danger btn-sm" type="button">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                    <td>{{cli.nombre+" "+cli.apellido}}</td>
+                    <td>{{cli.telefono}}</td>
+                    <td>{{cli.dni}}</td>
+                    <td>{{cli.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="shadow">
+        <div class="container p-3">
+            <input type="text" class="form-control" id="buscar" placeholder="Buscar..."[(ngModel)]="buscarRep" [ngModelOptions]="{standalone: true}">
+        </div>
+        <h3>Reparaciones</h3>
+        <table class="table table-striped mt-3">
+
+            <thead>
+                <tr>
+                    <th scope="col">Accion</th>
+                    <th scope="col">Fecha de Ingreso</th>
+                    <th scope="col">CLiente</th>
+                    <th scope="col">Dni</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rep of reparaciones|buscarRep: buscarRep">
+                    <td>
+                        <button mat-button (click)="detalleRep(rep._id)" class="btn-primary btn-sm" type="button">
+                            <mat-icon>description</mat-icon>
+                        </button>
+                        <button mat-button (click)="editRep()" class="btn btn-light btn-sm" type="button">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-button (click)="deleteRep(rep._id)" class="btn btn-danger btn-sm" type="button">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                    <td>{{rep.fecha}}</td>
+                    <td>{{rep.cliente.nombre+" "+ rep.cliente.apellido}}</td>
+                    <td>{{rep.cliente.dni}}</td>
+                    <td>{{rep.cliente.telefono}}</td>
+                    <td>{{rep.estado}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
